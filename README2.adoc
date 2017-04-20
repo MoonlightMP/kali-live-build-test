@@ -1,0 +1,35 @@
+= Kali Live Build
+
+Upstream: http://git.kali.org/gitweb/?p=live-build-config.git;a=summary[Kali's live-build configuration]
+
+== Setup
+
+----
+apt-get install curl git live-build cdebootstrap
+----
+
+== Build
+
+----
+cd kali-live-build
+./build.sh --distribution kali-rolling --verbose --variant custom
+----
+
+*Caching*
+
+via a caching proxy e.g. http://www.squid-cache.org/[Squid]:
+
+----
+./build.sh --distribution kali-rolling --verbose --variant custom -- \
+--apt-http-proxy=http://localhost:3128/
+----
+
+Example link:squid.conf[squid.conf]
+
+== Docs
+
+* http://docs.kali.org/development/live-build-a-custom-kali-iso[Live Build a Custom Kali ISO]
+* http://docs.kali.org/downloading/kali-linux-live-usb-install[Making a Kali Bootable USB Drive]
+* http://docs.kali.org/downloading/kali-linux-live-usb-persistence[Kali Linux Live USB Persistence]
+* https://www.debian.org/devel/debian-live/[Debian live-build docs]
+* https://debian-live.alioth.debian.org/live-manual/stable/manual/html/live-manual.en.html[Live Systems Manual]
