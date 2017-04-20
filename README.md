@@ -1,2 +1,7 @@
-# kali-live-build-test
-kali-live-build
+
+Some Debian bugs filed for issues encountered in Kali:
+
+#684865: live-build: lb_binary_syslinux fails to include flavour in menu entry
+#684891: live-build: add a config parameter to define the project name
+#684893: live-build: fails to find bootloaders files when running from git checkout
+#684896: live-build: loading of build.sh does not work as expected in various scripts
